@@ -10,7 +10,7 @@ export default function Home() {
   const[password,setPassword]= useState('');
   const[confirmpassword,setConfirmPassword]= useState('');
 
-  function submitForm(){
+  async function submitForm(){
 
     const data = {
       fullname:fullname,
@@ -19,8 +19,22 @@ export default function Home() {
       password:password
     }
 
-    
-  }
+    try{
+      const response = await fetch('api/users/create',{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(data)
+      });
+      const json = await response.json();
+      console.log(json);
+      alert("User Created Successfully");
+    }
+    catch{
+      console.log('error');
+    }
+}
 
   return (
     <div>
