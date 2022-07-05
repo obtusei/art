@@ -1,0 +1,6 @@
+.artgrid{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 10px;
+    column-gap: 0px;
+}
