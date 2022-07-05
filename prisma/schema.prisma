@@ -1,0 +1,46 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id String @id @default(cuid())
+  name String 
+  email String @unique
+  password String
+  createdAt DateTime @default(now())
+}
+
+model museum {
+  id String @id @default(cuid())
+  name String
+  location String 
+  description String 
+  contacts Int 
+  arts art[]
+}
+
+model art {
+  id String @id @default(cuid())
+  name String 
+  image String
+  artist artist @relation(fields: [artistid], references : [id])
+  artistid String 
+  description String 
+  museum museum @relation(fields: [museumid], references: [id])
+  museumid String 
+}
+
+model artist {
+  id String @id @default(cuid())
+  name String 
+  image String?
+  description String 
+  arts art[]
+}
