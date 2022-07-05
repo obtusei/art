@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Arts() {
   return (
     <div>
-      <h1>Arts</h1>
+      <h1 style={{'fontWeight':'normal'}}>Arts</h1>
     </div>
   )
 }
