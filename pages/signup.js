@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/router';
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
   const [email,setEmail] = useState('');
   const[password,setPassword]= useState('');
   const[confirmpassword,setConfirmPassword]= useState('');
+  const router  = useRouter();
 
   async function submitForm(){
 
@@ -19,21 +21,17 @@ export default function Home() {
       password:password
     }
 
-    try{
-      const response = await fetch('api/users/create',{
-        method:'POST',
-        headers:{
-          'Content-Type':'application/json'
-        },
-        body:JSON.stringify(data)
-      });
-      const json = await response.json();
-      console.log(json);
-      alert("User Created Successfully");
-    }
-    catch{
-      console.log('error');
-    }
+    // try{
+      await axios.post('/api/users/create',data);
+      alert("USER CREATED SUCCESSFULLY");
+      router.push('/login');
+    // }
+    // catch{
+    //   console.log('error');
+    // }
+    
+    
+
 }
 
   return (
@@ -70,11 +68,11 @@ export default function Home() {
                 <input type={'password'} placeholder={"Re-enter your password"} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
               </div>
               <div>
-                <button type='submit'>
+                <button type='submit' onClick={submitForm}>
                   Sign Up 
                 </button>
               </div>
-
+            <button onClick={submitForm}>add user</button>
               <div>
                 <p>Already have an account?</p><Link href="/login">Login</Link>
               </div>
