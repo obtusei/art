@@ -12,6 +12,12 @@
     justify-content: space-between;
 }
 
+.hamMenu{
+    display: none;
+}
+
+
+
 .navitem{
     display: flex;
     flex-direction: row;
@@ -86,5 +92,8 @@
 
     .navitem{
         flex-direction: column;
+    }
+    .hamMenu{
+        display: block;
     }
 }

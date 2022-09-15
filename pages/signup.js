@@ -2,7 +2,8 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
-
+import axios from 'axios';
+import bcrypt, { genSalt } from 'bcryptjs'
 export default function Home() {
 
   const [fullname,setFullname] = useState('');
@@ -13,22 +14,16 @@ export default function Home() {
   const router  = useRouter();
 
   async function submitForm(){
-
-    const data = {
-      fullname:fullname,
-      username:username,
-      email:email,
-      password:password
+    try{
+      const salt = await bcrypt.genSalt(10);
+      const hashPassword = await bcrypt.hash(password,salt);
+      const resp = await axios.post('http://localhost:3000/api/users/create',{ fullname,username, email,hashPassword});
+      console.log(resp.data);
+      router.push("/login")
     }
-
-    // try{
-      await axios.post('/api/users/create',data);
-      alert("USER CREATED SUCCESSFULLY");
-      router.push('/login');
-    // }
-    // catch{
-    //   console.log('error');
-    // }
+    catch{
+      console.log('Error');
+    }
     
     
 

@@ -3,13 +3,13 @@ import prisma from "../../../libs/prisma";
 export default async function handler(req,res) {
           if (req.method == "POST"){
                     try{
-                              const { fullname,username, email, password } = req.body;
+                              const { fullname,username, email, hashPassword } = req.body;
                               const user = await prisma.user.create({
                                                   data: {
                                                             name:fullname,
                                                             username:username,
                                                             email:email,
-                                                            password:password
+                                                            password:hashPassword
                                                   }
                               });
                               res.json(user);
