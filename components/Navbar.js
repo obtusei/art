@@ -22,10 +22,6 @@ export default function Navbar(){
                      <li className={styles.linkitem} style={linkitem}><Link href="/about">About</Link></li> 
                      <li className={styles.linkitem} style={linkitem}><Link href="/login">Login</Link></li> 
                      <li className={styles.linkitemButton} style={linkitem}><Link href="/signup">Sign Up</Link></li> 
-                     
-                      
-                         
-                      
                     </ul>
                 </div>
             </div>
