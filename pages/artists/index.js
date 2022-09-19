@@ -9,7 +9,7 @@ export default function Home() {
     {
       [...Array(20)].map((card,index) => (
         <div key={index} className={styles.griditem}>
-          <ArtCard topHidden href={'/arts'}/>
+          <ArtCard topHidden href={`/artists/${card}`}/>
         </div>
       ))
     }

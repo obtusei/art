@@ -10,6 +10,29 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover{
+  color: red;
+}
+span{
+  font-weight: bold;
+}
+
+input{
+  background-color: rgb(213, 213, 213);
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+button{
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 * {
   box-sizing: border-box;

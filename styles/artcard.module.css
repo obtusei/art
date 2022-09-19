@@ -1,8 +1,9 @@
 .card{
     width: 100%;
     height: 200px;
-    background-color: red;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contents{
