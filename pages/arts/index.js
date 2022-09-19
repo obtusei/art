@@ -4,7 +4,7 @@ import styles from "../../styles/artists.module.css"
 
 
 export default function Museums() {
-  const nepaliArt = ["Painting","Architecture","Sculpture","Wood craving","Pottery","Pagoda","Shikhara","Stupa"]
+  const nepaliArt = ["Painting","Architecture","Sculpture","Wood Carving","Pottery"]
   return (
     <div className={styles.mainView}>
       <h1>Arts</h1>
@@ -12,7 +12,7 @@ export default function Museums() {
     {
       nepaliArt.map((card,index) => (
         <div key={index} className={styles.griditem}>
-          <ArtCard h={card} p={"120"} href={`/arts/${card}`} image={"img1.jpg"}/>
+          <ArtCard h={card} p={"120"} href={`/arts/${card}`} image={`arts/${card}.jpg`}/>
         </div>
       ))
     }

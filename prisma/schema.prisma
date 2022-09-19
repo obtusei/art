@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgres"
   url      = env("DATABASE_URL")
 }
 
@@ -28,6 +28,7 @@ model museum {
   location    String
   description String
   contacts    String
+  image       Int
   arts        art[]
 }
 

@@ -1,7 +1,26 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-function Museum() {
+import safeJsonStringify from 'safe-json-stringify'
+import prisma from "../../libs/prisma"
+import {getSession} from "next-auth/react"
+
+export async function getServerSideProps(context) {
+  const session = await getSession(context)
+  const user = await prisma.user.findUnique({
+    where:{
+      email:session.user.email
+    }
+  })
+  const userData = JSON.parse(safeJsonStringify(user))
+  return {
+    props: {
+      role:userData.role
+    }, // will be passed to the page component as props
+  }
+}
+
+function Museum({role}) {
 
   const [name,setName] = useState("")
   const [location,setLocation] = useState("")
@@ -14,7 +33,7 @@ function Museum() {
         name:name,
         location:location,
         description:description,
-        contact
+        contacts:contact
       }
       
       await axios.post("/api/museum",data)
@@ -23,12 +42,15 @@ function Museum() {
       console.log("ERROR");
     }
   }
+  if (role === "USER"){
+    return <p>You are not an admin</p>
+  }
   return (
     <div style={{padding:"20px"}}>
       <button onClick={() => router.back()} style={{backgroundColor:"transparent",color:"red"}}>Go back</button>
       <h1>Add Museum</h1>
       <hr />
-      <form>
+      
         <div>
           <label>Name:</label> <br/>
           <input type={'text'} placeholder={"enter your username"} value={name} onChange={(e) => setName(e.target.value)}/>
@@ -50,7 +72,7 @@ function Museum() {
         </div>
         <br />
         <button onClick={addMuseum} style={{width:"100%"}}>Add</button>
-      </form>
+      
     </div>
   )
 }
