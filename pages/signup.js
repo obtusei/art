@@ -17,7 +17,7 @@ export default function Home() {
     
       const userData = { name:fullname,username:username, email:email,password:password}
       axios.post("api/users/create", userData).then((response) => {
-        router.push('/login');
+        console.log(response.data)
       }).catch((error) => {
         console.log(error);
       });

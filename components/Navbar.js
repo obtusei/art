@@ -13,7 +13,7 @@ export default function Navbar(){
     return (
         <div className={styles.navbar}>
             <div  className={styles.nav}>
-                <Link href={"/"} className={styles.logo}>Art History Tracker</Link>
+                <Link href={"/"} className={styles.logo}><span style={linkitem}>Art History Tracker</span></Link>
                 <div className={styles.hamMenu}><button>Menu</button></div>
                 <div className={styles.mainNav}>
                     
