@@ -1,6 +1,13 @@
 import styles from '../styles/signup.module.css'
 import Link from 'next/link'
+import { signIn } from 'next-auth/react'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 export default function Home() {
+
+  const [username,setUsername] = useState('')
+  const [password,setPassword] = useState('')
+  const router = useRouter()
   return (
     <div className={styles.container}>
 
@@ -11,18 +18,27 @@ export default function Home() {
 
               <div>
                 <label>username:</label> <br/>
-                <input type={'text'} placeholder={"enter your username"}/>
+                <input type={'text'} placeholder={"enter your username"} value={username} onChange={(e) => setUsername(e.target.value)}/>
               </div>
 
               <br/>
               <div>
                 <label>password:</label> <br/>
-                <input type={'password'} placeholder={"create a password"}/>
+                <input type={'password'} placeholder={"create a password"} value={password} onChange={(e) => setPassword(e.target.value)}/>
               </div>
               <br/>
               <div>
-                <button type='submit'  style={{width:"100%"}}>
-                  login 
+                <button style={{width:"100%"}} onClick={
+                  ()  => {
+                    let data={
+                    username:username,
+                    password:password
+                  }
+                    signIn("credentials", data)
+                    
+                  }
+                }>
+                  login
                 </button>
               </div>
 

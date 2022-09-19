@@ -27,19 +27,20 @@ model museum {
   name        String
   location    String
   description String
-  contacts    Int
+  contacts    String
   arts        art[]
 }
 
 model art {
-  id          String @id @default(cuid())
+  id          String  @id @default(cuid())
   name        String
   image       String
-  artist      artist @relation(fields: [artistid], references: [id])
-  artistid    String
+  category    String  @unique
+  artist      artist? @relation(fields: [artistid], references: [id])
+  artistid    String?
   description String
-  museum      museum @relation(fields: [museumid], references: [id])
-  museumid    String
+  museum      museum? @relation(fields: [museumid], references: [id])
+  museumid    String?
 }
 
 model artist {

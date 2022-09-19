@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import bcrypt, { genSalt } from 'bcryptjs'
+import {useSession} from "next-auth/react"
 export default function Home() {
 
   const [fullname,setFullname] = useState('');
@@ -12,23 +12,19 @@ export default function Home() {
   const[password,setPassword]= useState('');
   const[confirmpassword,setConfirmPassword]= useState('');
   const router  = useRouter();
-
-  async function submitForm(){
-    try{
-      const salt = await bcrypt.genSalt(10);
-      const hashPassword = await bcrypt.hash(password,salt);
-      const resp = await axios.post('http://localhost:3000/api/users/create',{ fullname,username, email,hashPassword});
-      console.log(resp.data);
-      router.push("/login")
-    }
-    catch{
-      console.log('Error');
-    }
+  const {data:session} = useSession();
+  function submitForm(e){
     
-    
-
-}
-
+      const userData = { name:fullname,username:username, email:email,password:password}
+      axios.post("api/users/create", userData).then((response) => {
+        router.push('/login');
+      }).catch((error) => {
+        console.log(error);
+      });
+  }
+  if (session){
+    router.push('/');
+  }
   return (
     <div className={styles.container}>
         <div className={styles.column1}>
@@ -38,7 +34,7 @@ export default function Home() {
         <div className={styles.column2}>
           <div className={styles.signup}>
             <h1>Sign Up</h1>
-            <form onSubmit={submitForm}>
+            <form>
               <div>
                 <label>Full Name:</label> <br/>
                 <input type={'text'} placeholder={"enter your name"} value={fullname} onChange={(e) => setFullname(e.target.value)}/>
@@ -64,7 +60,7 @@ export default function Home() {
                 <input type={'password'} placeholder={"re-enter your password"} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
               </div> <br/>
               <div>
-                <button type='submit' onClick={submitForm} style={{width:"100%"}}>
+                <button onClick={submitForm} style={{width:"100%"}}>
                   Sign Up 
                 </button>
               </div>
