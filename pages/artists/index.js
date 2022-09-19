@@ -3,12 +3,14 @@ import styles from "../../styles/artists.module.css"
 
 export default function Home() {
   return (
-    <div>
+    <div className={styles.mainView}>
       <h1>Artists</h1>
     <div className={styles.artgrid}>
     {
-      [1,2,3,4,5,6,7,8,9].map(card => (
-        <ArtCard/>
+      [...Array(20)].map((card,index) => (
+        <div key={index} className={styles.griditem}>
+          <ArtCard topHidden href={'/arts'}/>
+        </div>
       ))
     }
     </div>

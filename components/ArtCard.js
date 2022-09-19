@@ -1,13 +1,14 @@
+import Link from "next/link"
 import styles from "../styles/artcard.module.css"
-export default function ArtCard(){
+export default function ArtCard({topHidden=false,href}){
     return (
-        <div>
+        <Link href={href}>
             <div className={styles.card}>
             <div className={styles.contents}>
-            <div>Mandala</div>
-            <div>1200 items</div>
+            <h4 style={{display:topHidden ? "block":"block"}}>Mandala</h4> <br />
+            <p>1200 items</p>
             </div>
             </div>
-        </div>
+        </Link>
     )
 }
