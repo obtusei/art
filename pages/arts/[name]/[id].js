@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
-
+import Image from 'next/image'
 
 
 function Art() {
   return (
     <div>
       <h1>The Lady Finger</h1>
-      <img src='https://www.w3schools.com/howto/img_nature.jpg' alt='image'/>
+      <Image src='https://www.w3schools.com/howto/img_nature.jpg' alt='image'/>
       <br/>
       <hr/>
       <p><span>Title: </span>Lady Finger</p>

@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import ArtCard from "../../../components/ArtCard"
 import styles from "../../../styles/artists.module.css"
-
+import { useSession } from "next-auth/react"
 
 // export async function getStaticPaths() {
 //   const nepaliArt = ["Painting","Architecture","Sculpture","Wood craving","Pottery","Pagoda","Shikhara","Stupa"]
@@ -20,7 +20,13 @@ import styles from "../../../styles/artists.module.css"
 
 export default function Art() {
   const router = useRouter()
+  const {data:session} = useSession()
   const {name} = router.query
+  if (!session){
+    return (
+      <Link href="/login">Login to view</Link>
+    )
+  }
   return (
     <div className={styles.mainView}>
         <Link href={"/arts"} style={{paddingLeft:"200px"}}>Go Back</Link>

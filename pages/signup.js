@@ -13,15 +13,34 @@ export default function Home() {
   const[confirmpassword,setConfirmPassword]= useState('');
   const router  = useRouter();
   const {data:session} = useSession();
-  function submitForm(e){
+
+  async function submitForm(){
     
-      const userData = { name:fullname,username:username, email:email,password:password}
-      axios.post("api/users/create", userData).then((response) => {
-        console.log(response.data)
-      }).catch((error) => {
-        console.log(error);
-      });
+    const data = { name:fullname,username:username, email:email,password:password}
+    try{
+      const response = await fetch("/api/users/create",{
+        method:"POST",
+        body:JSON.stringify(data),
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+      const json = await response.json();
+      if(json.error){
+        alert(json.error);
+      }
+      else{
+        alert("User created successfully");
+        router.push("/login");
+      }
+
+      // router.push('/login')
+    }
+    catch{
+      console.log("error")
+    }
   }
+
   if (session){
     router.push('/');
   }
@@ -34,7 +53,6 @@ export default function Home() {
         <div className={styles.column2}>
           <div className={styles.signup}>
             <h1>Sign Up</h1>
-            <form>
               <div>
                 <label>Full Name:</label> <br/>
                 <input type={'text'} placeholder={"enter your name"} value={fullname} onChange={(e) => setFullname(e.target.value)}/>
@@ -60,16 +78,14 @@ export default function Home() {
                 <input type={'password'} placeholder={"re-enter your password"} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
               </div> <br/>
               <div>
-                <button onClick={submitForm} style={{width:"100%"}}>
+                <button onClick={ () => submitForm()} style={{width:"100%"}}>
                   Sign Up 
                 </button>
               </div>
               <div>
                 <p>already have an account? <Link href="/login">login</Link></p>
               </div>
-
-              
-            </form>
+            
           </div>
         </div>
       

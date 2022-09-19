@@ -26,7 +26,7 @@ function Museum() {
         <br />
         <div>
           <label>username:</label> <br/>
-          <input type={'text'} placeholder={"enter your username"} value={location} onChange={(e) => setLocation(e.target.value)}/>
+          <input type={'text'} placeholder={"enter your username"} value={category} onChange={(e) => setCategory(e.target.value)}/>
         </div>
         <br />
         <div>

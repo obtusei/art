@@ -1,6 +1,6 @@
 import styles from '../styles/signup.module.css'
 import Link from 'next/link'
-import { signIn } from 'next-auth/react'
+import { useSession,signIn } from 'next-auth/react'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 export default function Home() {
@@ -8,13 +8,17 @@ export default function Home() {
   const [username,setUsername] = useState('')
   const [password,setPassword] = useState('')
   const router = useRouter()
+  const {data:session} = useSession()
+  if (session){
+    router.push('/');
+  }
   return (
     <div className={styles.container}>
 
         <div className={styles.column2}>
           <div className={styles.signup}>
             <h1>login</h1>
-            <form>
+            
 
               <div>
                 <label>username:</label> <br/>
@@ -45,9 +49,6 @@ export default function Home() {
               <div>
                 <p>not a user yet? <Link href="/signup">signup</Link></p>
               </div>
-
-              
-            </form>
           </div>
         </div>
       
