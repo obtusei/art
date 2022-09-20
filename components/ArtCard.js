@@ -6,7 +6,7 @@ export default function ArtCard({h,p,topHidden=false,botHidden=false,href,image}
             <div className={styles.card} style={{backgroundImage:`url('./${image}')`}}>
             <div className={styles.contents}>
             <h4 style={{display:topHidden ? "none":"block"}}>{h}</h4> <br />
-            <p style={{display:botHidden ? "none":"block"}}>{p} items</p>
+            <p style={{display:botHidden ? "none":"block"}}>{p}</p>
             </div>
             </div>
         </Link>

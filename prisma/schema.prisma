@@ -36,7 +36,7 @@ model art {
   id          String  @id @default(cuid())
   name        String
   image       String
-  category    String  @unique
+  category    String
   artist      artist? @relation(fields: [artistid], references: [id])
   artistid    String?
   description String
@@ -45,9 +45,9 @@ model art {
 }
 
 model artist {
-  id          String  @id @default(cuid())
+  id          String @id @default(cuid())
   name        String
-  image       String?
+  image       Int?
   description String
   arts        art[]
 }

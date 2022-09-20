@@ -23,23 +23,35 @@ export async function getServerSideProps(context) {
 function Museum({role}) {
 
   const [name,setName] = useState("")
+  const [image,setImage] = useState(0)
   const [location,setLocation] = useState("")
   const [description,setDescription] = useState("")
   const [contact,setContact] = useState("")
   const router = useRouter();
   const addMuseum = async (e) => {
+
+    const data = { name:name,image:image, location:location,description:description,contacts:contact}
     try{
-      const data = {
-        name:name,
-        location:location,
-        description:description,
-        contacts:contact
+      const response = await fetch("/api/museum",{
+        method:"POST",
+        body:JSON.stringify(data),
+        headers:{
+          "Content-Type":"application/json"
+        }
+      })
+      const json = await response.json();
+      if(json.error){
+        alert(json.error);
       }
-      
-      await axios.post("/api/museum",data)
+      else{
+        alert("User created successfully");
+        router.push("/admin");
+      }
+
+      // router.push('/login')
     }
     catch{
-      console.log("ERROR");
+      console.log("error")
     }
   }
   if (role === "USER"){
@@ -69,6 +81,11 @@ function Museum({role}) {
         <div>
           <label>Contact:</label> <br/>
           <input type={'text'} placeholder={"enter your username"} value={contact} onChange={(e) => setContact(e.target.value)}/>
+        </div>
+        <br />
+        <div>
+          <label>Image:</label> <br/>
+          <input type={'number'} placeholder={"enter your image number"} value={image} onChange={(e) => setImage(e.target.value)}/>
         </div>
         <br />
         <button onClick={addMuseum} style={{width:"100%"}}>Add</button>

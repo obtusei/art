@@ -1,14 +1,4 @@
-// import prisma from "../libs/prisma"
-import {PrismaClient} from "@prisma/client"
-
-const prisma = new PrismaClient();
-
-async function main() {
-          
-  
-    await prisma.artist.createMany({
-      data:
-      [{
+[{
   "name": "samundra man singh shrestha",
   "description": "Born in 1980, Shrestha is a trained Paubha artist. He started his journey into the world of art at the tender age of 14.  Shrestha’s work skillfully combines his inspiration and mastery of the traditional Newar style of painting with conceptual contemporaneity—with binaries and juxtaposition of past and present, modern and traditional, and the aesthetic with pure conception. His innovative works push the boundaries of the sacred and secular, by challenging the very categories of contemporary and traditional art. His art works are deeply rooted in the sacred knowledge of iconography of deities, He has received significant national and international awards, and his work is in major collection of India, UK, US, Europe, and East Asia.",
   "image": 1
@@ -59,20 +49,7 @@ async function main() {
   "image": 10
 },
 {
-  "name": "sabita dangol",
+  "name": "sa},bita dangol",
   "description": "Sabita Dangol (1984), a visual artist based in Kathmandu, Nepal.",
   "image": 11
-}] 
-    })
-
-
-}
-
-main()
-    .catch((e) => {
-        console.log(e);
-        process.exit(1)
-    })
-    .finally(async () =>{
-        await prisma.$disconnect();
-    });
+}]

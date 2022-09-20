@@ -1,6 +1,6 @@
-import prisma from "../../libs/prisma";
+import prisma from "../../../libs/prisma";
 import { unstable_getServerSession } from "next-auth/next"
-import { authOptions } from "./auth/[...nextauth]"
+import { authOptions } from "../auth/[...nextauth]"
 
 export default async function handler(req,res) {
     const session = await unstable_getServerSession(req, res, authOptions)
@@ -12,12 +12,16 @@ export default async function handler(req,res) {
     if (req.method == "GET"){
       try{
         if (session){
-          const arts = await prisma.art.findMany({
-          where:{
-            category:req.body.category
-          }
-        });
-        res.json({arts:arts,session:session});
+          const arts = await prisma.art.findUnique({
+            where:{
+              id:req.query.id
+            },
+            include:{
+              artist:true,
+              museum:true
+            }
+          });
+        res.json(arts);
         }else{
           res.send("Need to login")
         }

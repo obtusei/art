@@ -1,0 +1,266 @@
+title: impression
+about: impression
+artist: rajan kumar pant
+museum: museum of nepali arts
+imageID: 1
+
+title: bhadgaon
+about: Bhaktapur, known locally as Khwopa, is a city in the east corner of the Kathmandu Valley in Nepal located about 13 kilometres from the capital city, Kathmandu. In terms of area, Bhaktapur is the smallest district of Nepal.
+artist: rajman singh chitrakar
+museum: null
+imageID: 2
+
+title: akash yogini (bijesvari)
+about: Akash Yogini is also called “Bijesvari” (wisdom goddess), and “Vidhyadhari Vajrayogini” (knowledge holder). She is seen in a flying position leaping towards the akash (sky). One of her legs is pointed towards the sky and her right leg is bent up at the knee without touching the ground. The Goddess’s left-hand goes under her left leg and carries a kapala (skull cup) and khatwanga (long studded club) which is sealed with a golden cross vajra, a nectar vase, impaled blue head of Bhairav, a human head, a dry white skull and a crowning half Vajra.
+artist: raj prakash man tuladhar
+museum: museum of nepali arts
+imageID: 3
+
+title: bodhisattva
+about: In Buddhism, a bodhisattva or bodhisatva is a person who is on the path towards bodhi or Buddhahood.
+artist: rajan sangachhe
+museum: museum of nepali arts
+imageID: 4
+
+title: cultural heritage
+about: Cultural heritage includes: cultures, customs, beliefs, rites, rituals, ceremonies, indigenous knowledge, social customs and traditions, arts, crafts, music, political and ideological beliefs that influence culture and behavior, history, practices concerning the natural environment, religious and scientific traditions etc.
+artist: pradip kumar bajracharya
+museum: museum of nepali arts
+imageID: 5
+
+title: dipankara buddha
+about: Dīpankara embodies a Buddha of the past who attained Enlightenment eons before to Shakyamuni Buddha. He is believed to be the 24th predecessor of Gautama Buddha. Dīpankara is usually accompanied by the Bodhisattvas; Manjushri, Vajrapani or Avalokitesvara. In this painting, the artist presents Dīpankara as in the festival of Samyak Daan flanked by Dhyani Buddha Amitabha and Vairochana. The Newar Buddhist community consider him as a destroyer of evil, protector of merchants and associate him with alms-giving.
+artist: prem man chitrakar
+museum: museum of nepali arts
+imageID: 6
+
+title: family puja
+about: For daily devotion, many Hindu families have a home shrine , often in a corner of the best room in the house. It is a way of honouring the gods and goddesses. Worship at the shrine may involve the whole family, or sometimes it is done alone. A daily puja ceremony uses all five of the senses.
+artist: m m poon
+museum: null
+imageID: 7
+
+title: ganesha
+about: Commonly referred as Vinayaka, Ganesha is widely revered as the remover of obstacles, the patron of art and science and the god of intellect and wisdom. He is honored as the first deity to be
+worshipped during rites and ceremonies. In this painting, Tuladhar has placed Ganesha in front of an element mandala with the sun and moon at the top two corners.
+artist: raj prakash man tuladhar
+museum: museum of nepali arts
+imageID: 8
+
+title: green tara
+about: The spiritual consort of Dhyani Buddha Amoghasiddhi, the Green Tara, represented by the color of her skin, is the protectress from all obstacles and dangers. She is the embodiment of the element of air and she is symbolized by the green (here blue) night or closed lotus.
+artist: samundra man singh shrestha
+museum: museum of nepali arts
+imageID: 9
+
+title: guheshwori
+about: According to Buddhist legends, from the root of the lotus seed thrown by Vipaswi Buddha in the lake that was Kathmandu Valley, emerged Guheswori. The Hindus believe that Guheswori is the reproductive part of Satidevi, wife of Lord Shiva. Thus, both religions 
+give her the symbol of procreation.
+Manjushri, founder of Kathmandu Valley visualized this goddess while carrying out rituals to drain the water out of the Valley. She is also called “Nairatma Devi”, the one who is blue, and signifies the wisdom of emptiness. She is the 
+emanation of Akshyobhya Buddha and is the consort of Hevajra. She carries a Karti (knife) in her right hand and the left carries a Khatwanga (long studded club) and Kapala (skull). The Goddess stands in Ardhapayanka (dancing position) and steps over a corpse.
+artist: raj prakash man tuladhar
+museum: museum of nepali arts
+imageID: 10
+
+title: jyotirupa saksyatkar
+about: The Pancha Buddha reflects the central features of Vajrayana Buddhism. They are emanation of five qualities of Adi-Buddha and embody the five cosmic elements, colors and directions. Vairochana: air, white, center 
+Akshobhya: water, blue, east, Ratnasambhava: earth, yellow, south
+Amitabha: fire, red, west, Amoghasiddhi: air, green, north.
+Shrestha has placed Sakyamuni Buddha (historical Buddha) at the center and Maitreya Buddha (future Buddha) to the right.
+artist: rabi shrestha
+museum: museum of nepali arts
+imageID: 11
+
+title: kurukulla
+about: Kurukullā is a significant and famous form of Red Tārā. She is considered a Ḍākinī or yoginī who is an emanation of Amitābha Buddha. The goddess is regarded as a powerful enchantress who is a bewitcher of men. The main intention in her practice is not for the gain of material benefits regarded as corrupted, but for the development of Karuṇā, compassion. Kurukullā is also believed to be the offspring of Pancha Dhyāni Buddhas. 
+Kurukullā’s iconography falls into two categories: one, following Mahayana iconographic traits, and second, following Tantric interpretation. Tibetan and Newar art mostly follow the Tantric variation. There is also the practice of conducting a homa ritual, observed as one of the important practices in the Vajrayāna tradition. This practice intends to cultivate bodhicitta used as a guide to realizing the truth of Voidness or śunyatā. Kurukullā destroys ignorance and transforms egocentric hindrances into energizing insight through her arrows of flowers. 
+In this painting, Tuladhar has incorporated the Three Great Red Ones representing Kurukullā as the main deity, and at the bottom corners are the deities Rakta Gaṇeśa and Takkirāja. At the top can be found the Goddess of compassion, Ārya Tārā, a guru, and the Kurukullā yantra. The background is vibrant with vermilion color and the goddess is placed in front of the Nava Yoṇi yantra. 
+artist: raj prakash man tuladhar
+museum: museum of nepali arts
+imageID: 12
+
+title: lakshya chaitya
+about: The painting of Lakshya Chaitya illustrates Goddess Ushnishavijaya at the heart. The motive behind constructing the Lakshya Chaitya is for the fulfillment of one’s heart desire. This Chaitya is established following various ritualistic practices during the Janku celebration in the Newar community. Many people pray for the long life of their loved ones while establishing this chaitya.
+In the upper part of the Chaitya (stupa) prevails Pancha Buddha (five) and below that the chaitya is surrounded by Pancha Rakshya Goddesses. Ushnishavijaya Goddess is the goddess for long-life having three faces and eight hands, seated in the stupa. The Goddess holds a vajra lasso, second a bow, third bestowing protection, and fourth in meditative equipoise holding an auspicious nectar vase. Beneath the chaitya Arya Tara (Green Tara) is positioned and at the bottom of the painting are priests (vajracharyas) donors.
+artist: mukti singh thapa
+museum: museum of nepali arts
+imageID: 13
+
+title: mithila
+about: Mithila art is a form of folk art traditionally practised by women in the Mithila region on mud walls. It was only after 1990, when the Panchayat regime ended, that this art form began garnering some appreciation and attention and was accepted as one of the Nepali folk arts.
+artist: madhumala mandal
+museum: null
+imageID: 14
+
+title: padmasambhava
+about: Padmasambhava is the founder of Tibetan Buddhism. Also named by the Tibetans as “Guru Rinpoche,” he is considered the “Second Buddha”. The painting symbolizes Guru Padmasambhava as the one who has the Tantra Shakti to abolish all the negativity and hurdles by taming them and guiding them to the path of righteousness. In the painting, the artist exemplifies how Guru Padmasambhava was able to clear away various obstacles and complete his sadhana (meditation).
+artist: samundra man singh shrestha
+museum: museum of nepali arts
+imageID: 15
+
+title: prithvi narayan shah
+about: Maharajadhiraj Prithvi Narayan Shah was the last ruler of the Gorkha Kingdom and first monarch of the Kingdom of Nepal. Prithvi Narayan Shah started the unification of Nepal. Shah proclaimed the newly unified Kingdom of Nepal as Asal Hindustan due to North India being ruled by the Islamic Mughal rulers.
+artist: chandra man maskey
+museum: null
+imageID: 16
+
+title: saptalochani
+about: Saptalochani or The White Tara is a spectacular work of art. On first encounter with this masterpiece, a variety of emotions may emerge – from surprise to awe, bringing about an understanding that beauty has been totally redefined here. Saptalochani – a feeling engulfs you, as the beauty of simplicity captures the surrealist movement, it gently yet firmly overwhelms you. Your body, mind and soul enter a calm inner tidal wave. The flow of the energy resonates through the painting in a spiritual
+manner, touching your inner self.
+Saptalochani is not just a painting of the White Tara, but the artists’ lifetime learning essence captured in one single piece of canvas. Shrestha has mustered up his experiences and knowledge to bring out the mastery of simplicity. Through this style of simplicity, we view the incorporation of his linework, the rhythmic flow and blend of colors, and we witness the confident strokes of effortlessness and minimalism as they unite both the artist and the viewer.
+The White Tara proclaims a new era of Shrestha’s work. To create art, share, and then let it go; that’s one of the keys to living a successful and peaceful life. This artwork reminds one to be humble, thankful and compassionate.
+Tara is a symbol of love, compassion and beauty. Compassion is defined as being thoughtful towards the pain and sorrow of others. Shrestha’s Saptalochani helps us to be mindful through the simplicity, beauty, and attractiveness of his creation. The in-depth knowledge of White Tara becomes prominent not through the iconography but through the flow of the painter’s style and depiction.
+There is always a perfect iconographic presentation of White Tara in paubhas, thangkas, statues and temples and monasteries. Yet, how do we transfer the knowledge of the past to the next generation with the same kind of intensity, emotions and faith? To be able to understand, respect and pass down the values while retaining the same core is what Shrestha has mastered.
+artist: samundra man singh shrestha
+museum: museum of nepali arts
+imageID: 17
+
+title: swayambhunath
+about: Swayambhu is an ancient religious complex atop a hill in the Kathmandu Valley, west of Kathmandu city. The Tibetan name for the site means 'Sublime Trees', for the many varieties of trees found on the hill. However, Shingkun may be of the local in Tamang Bhasa name for the complex, Swayambhu, meaning 'self-sprung'.
+artist: ishan pariyar
+museum: null
+imageID: 18
+
+title: teaching of buddha
+about: It is said that when Buddha sermoned humans and animals, even the gods in heaven congregated to listen to him. The softness of his voice was carried miles by the current of air and enlivened everything on its path. Even after 2600 years, his teachings are still prevalent; guiding and teaching us selflessness, compassion and impermanence. This painting by Shrestha portrays Buddha’s sermon to Bodhivastva Vajrapani in a sacred room, as the deities drawn on the walls comes alive to listen and learn from his teaching.
+artist: samundra man singh shrestha
+museum: museum of nepali arts
+imageID: 19
+
+title: vasudhara
+about: Newar Buddhists of Kathmandu Valley worship Vasudhara as the goddess of abundance and wealth. For this reason, she is often compared with the Hindu goddess Laxmi. Her yellowish complexion represents the color of precious metals, symbolizing opulence and abundance. She is portrayed with six arms and seated in Lalitasana with her right foot resting on a vase of treasure. Her right hands forms the gesture of varada mudra (wish granting) and of singing, as well as holds a jewel whereas the left hands hold a vase of abundance, a sheaf of corn and a sutra (holy scripture).
+artist: ritesh shahi
+museum: museum of nepali arts
+imageID: 20
+
+title: maitreya bodhisattva
+about: According to Buddhist tradition, Maitreya is a bodhisattva who is prophesied to appear on Earth, achieve complete Enlightenment, and teach the Dharma. According to scriptures, Maitreya's teachings will be similar to those of Gautama Buddha (also known as Śākyamuni Buddha).
+artist: rabi shrestha
+museum: museum of nepali arts
+imageID: 21
+
+title: ratnasambhav
+about: Ratnasambhava is one of the Five Dhyani Buddhas of Mahayana and Vajrayana or Tantric Buddhism. Ratnasambhava's mandalas and mantras focus on developing equanimity and equality and, in Vajrayana Buddhist thought is associated with the attempt to destroy greed and pride.
+artist: ujay bajracharya 
+museum: museum of nepali arts
+imageID: 22
+
+title: hevajra mandala
+about: Hevajra appears here in his three-headed and four-armed form. This manifestation is drawn from the Hevajra Tantra, a text revered by the Sakya order of Tibetan Buddhism, who likely commissioned this painting from a Newari artist from Nepal. Hevajra and his consort Nairatmya dance at the intersection of four vajra gateways, indicating their position at the center of the cosmos. His name is composed of two syllables: “he,” compassion, representing the male aspect, and “vajra,” wisdom, the female aspect, which together offer the path beyond this illusory world. The repeating skull symbolism references the impermanence of all phenomena. Beyond the celestial palace are the eight great charnel grounds, each presided over by a yogic master, or mahasiddha. On the reverse, in an ornate Tibetan lantsa script, are the Sanskrit mantra oh ah hum and mantra syllables configured in a stupa silhouette.
+artist: lok chitrakar
+museum: museum of nepali arts
+imageID: 23
+
+title: mahakali
+about: Mahakali (Sanskrit: महाकाली, romanized: Mahākālī) is the Hindu goddess of time and death in the goddess-centric tradition of Shaktism. Similar to Kali, Mahakali is a fierce goddess associated with universal power, time, life, death, and both rebirth and liberation. She is the consort of Bhairava, the god of consciousness, the basis of reality and existence. Mahakali, in Sanskrit, is etymologically the feminised variant of Mahakala, or Great Time (which is interpreted also as Death), an epithet of the deities Narasimha and Shiva in Hinduism.
+artist: manikman chitrakar
+museum: museum of nepali arts
+imageID: 24
+
+title: dream of mayadevi
+about: Female attendants and guards, one of whom holds a sword, surround Maya, who is sleeping on a bed that has turned legs and is covered with an elegant floral textile. Maya dreams of a six-tusked elephant that descends from heaven to enter her womb through her right side; originally a small elephant would have been depicted in the broken central disk. This miraculous conception marks the Buddha Shakyamuni's final rebirth and physical entrance into this world.
+artist: manikman chitrakar
+museum: museum of nepali arts
+imageID: 25
+
+title: rato machhindranath temple
+about: The Rato Machhendranath Temple stands about 400 meters south of Patan's (Lalitpur's) Darbar Square in a large courtyard known as Ta Baha. Built in 1673 on the foundations of older temples which existed here since the 15th century, the temple honors Machhendranath (also known as Matsyendra), an influential early 10th century yogi who credited the god Shiva as his teacher and who practiced in the Indic lands of the era. While Machhendranath was of the Hindu faith, over the centuries, his memory was revered by Hindus and Buddhists alike. In Nepal, in particular, he has come to be known as a god of rain among both faiths, with Buddhists seeing him as an incarnation of Avalokiteśvara, and Hindus describing him as an incarnation of his old teacher, Shiva.
+artist: unknown
+museum: the rubin
+imageID: 26
+
+title: shiva vishvarupa
+about: Shiva is one of Hinduism’s major gods and the supreme god of the Shaivite sect, worshipers devoted primarily to him. He takes many forms—ascetic, destroyer, conqueror of death, cosmic dancer—and this painting presents him as Vishvarupa, “universal form” or “form of the world.” In this painting the viewer has the sense that the deity takes up all available space on the canvas, a visual metaphor for the perception that the entire world is divine. He embraces his female consort, who is in complete harmony with the mustached male god; the two appear to almost blend into each other. Both have a multitude of heads and arms, indicating their infinite vision and reach. Shiva bears the orbs of the sun and moon in his two main hands, as if the cosmos itself were in his grasp. The couple dances atop a dais supported by lesser Hindu gods and within an aureole of fire. They are surrounded by scenes of charnel grounds and other manifestations of the great god. At the bottom center the couple is shown in sexual embrace but their colors are reversed.
+artist: unknown
+museum: the rubin
+imageID: 27
+
+title: rakta lokeshvara
+about: Rakta, or Red, Lokeshvara, a meditation form of Avalokiteshvara, the Bodhisattva of compassion, stands at the center of this painting with his spiritual father Amitabha emanating from his crown and surrounded by a number of Hindu gods emanating from his body. In Nepal Buddhist deities and Hindu gods are both vital parts of ritual life and are worshiped side-by-side, and several deities particularly important to local communities retain conflated religious identities and are celebrated by Hindu and Buddhists alike at annual festivals and in daily rituals. In this case Red Lokeshvara has another identity as the local Hindu god Macchendranath, who is appealed to in a festival preceding the monsoon rains. Indeed, an inscription in gold letters below his feet identifies him as such (Macchendranath). A long inscription in Newari (a Nepalese script) at the center of the lower register emphasizes Lokeshvara’s kindness. It further indicates that the painting was commissioned in 1842 by a man named Shakya Bhikshu Bhavanisinha who lived in Kunche in the locality of Noghal (Kathmandu) together with his family. Below the inscription the artist has portrayed the family of donors on either side of Six-armed Mahakala. In this painting we see Newari painters employing artistic conventions of the nineteenth century with traditional elements such as those found in the donor depiction at the bottom.
+artist: unknown
+museum: the rubin
+imageID: 28
+
+title: siddha lakshmi
+about: The fierce Siddha Lakshmi, a wrathful manifestation of the Hindu goddess Durga, was the protecting and guiding goddess of the Malla kings, who ruled Nepal’s Kathmandu Valley from the thirteenth through eighteenth century and their descendants. Here she is shown at the center of the composition standing on the hands of her consort, the great god Shiva, with her various forms occupying the registers above and below. Her name opens with the Sanskrit term “siddha” which indicates that she has mastered the art of accomplishment, and as such she is appealed to by followers for the successful completion of projects.
+This painting’s tightly packed composition is characteristic of Nepalese paintings, which typically fill the canvas with deities, gods, goddesses, animals, and floral motifs. Also characteristic of Nepalese works of art, this painting includes an inscription on its back that allows it to be dated to 1796.
+artist: unknown
+museum: the rubin
+imageID: 29
+
+title: baudhanath stupa
+about: Bouddha, also known as Boudhanath, Khasti Chaitya and Khāsa Chaitya is a stupa in Kathmandu, Nepal. Located about 11 km from the center and northeastern outskirts of Kathmandu, its massive mandala makes it one of the largest spherical stupas in Nepal and the world.
+artist: unknown
+museum: the rubin
+imageID: 30
+
+title: chwaskamuni
+about: Chwaskamuni is also known as Palden Lhamo in the Tibetan and Newar community worship the deity as Chwasa Ajima. She is one of the three Dharmapala in Gelug School, alongside Mahakala and Yamantaka. Palden Lhamo has one face and two arms. On the inner level of symbolism, she holds in her mouth the demon of mental afflictions. She bites down on this demon with her sharp fangs of mindfulness, cir­cumspection, heedfulness, and diligence. Her red hair rising upward represents the blazing fire of perfect wisdom (jnana) that incinerates all worldly conceptions (vikalpa), which are the underlying causes of all misery. She wears the five-skull crown showing that she has extinguished the five poisons (greed, anger, ignorance, pride, and jealousy). The third eye of wis­dom is wide open in the middle of her forehead.
+artist: puran shakya
+museum: museum of nepali arts
+imageID: 31
+
+title: arya tara
+about: Arya Tara is also called Green Tara, which is regarded as the incarnation of compassion and is born from Avalokitesvara's tears. In Buddhism, it is believed that Green Tara is a representation of Amoghasiddhi Buddha, one of the Pancha Buddhas. Arya Tara provides assistance and security in the samsaric (materialistic) universe from all the unfortunate circumstances. The gesture of Green Tara is known as “gesture of refuge” or Kachin Chagya Mudra and holds a lotus.
+artist: balaram nhisutu
+museum: museum of nepali arts
+imageID: 32
+
+title: shiva, parvati and ganesh
+about: Shiva and Parvati’s biological son was Skanda or Kartikeya. Ganesha was created by Parvati from clay , the “matter” of earth. She is the Shakti , the energy that flows . In Tantra , Shiva is the word , the Shakti the hidden meaning and content behind the word . Never visible but the active principle . If you remove ई matra from शिव it becomes शव , a dead body .
+artist: udaya charan shrestha
+museum: museum of nepali arts
+imageID: 33
+
+title: bratabanda of siddharth gautam sakya
+about: In this painting, Chitrakar recreated the story of Buddha in modern-day interpretation of Bratabandha ritual; here a Newar male child goes through a rite of passage by entering tutelary temple, that houses the deities of the guthi. By showing his respect and devotion, the boy engages in a coming of age ceremony that defines him as a part of that particular guthi.
+artist: manikman chitrakar
+museum: museum of nepali arts
+imageID: 34
+
+title: bhimsen thapa
+about: Bhimsen Thapa was a Nepalese statesman who served as the Mukhtiyar and de facto ruler of Nepal from 1806 to 1837. He is widely known as the longest serving Prime Minister of Nepal and was inducted into the "National heroes of Nepal" by King Mahendra Bir Bikram Shah.
+artist: anand muni shakya
+museum: museum of nepali arts
+imageID: 35
+
+title: bhagawati
+about: Bhagavatī, is a Hindu epithet of Sanskrit origin, used as an honorific title for female deities in Hinduism. It is primarily used to address one of the Tridevi: Saraswati, Lakshmi, and Parvati. The male equivalent of Bhagavatī is Bhagavān. The term is an equivalent of Devi and Ishvari.
+artist: amir man chitrakar
+museum: museum of nepali arts
+imageID: 36
+
+title: bhadrakali
+about: Bhadrakali also known as Mahakali and Kali, is a Hindu goddess. According to Shaktism, she is one of the fierce forms of the Supreme Goddess Shakti, or Adi Parashakti, mentioned in the Devi Mahatmyam. In Vaishnavism, Bhadrakali is among the many epithets of Yogamaya, the internal potency of illusion of the preserver deity, Vishnu. According to several Puranas, Bhadrakali is a form of the goddess Parvati. She is worshipped in Kerala as Bhagavati, Mahakali, Chamunda, Sree Kurumba, and Kariam Kali Murti. She is purported to be the auspicious and fortunate form of Mahakali who protects the good, known as Bhadra.
+artist: dhana bahadur chitrakar
+museum: museum of nepali arts
+imageID: 37
+
+title: dakshinkali
+about: Mother Dakshinakali is the most popular form of Kali. She is the benevolent mother, who protects her devotees and children from mishaps and misfortunes. There are various stories explaining the origin of the name Dakshinakali. Dakshina refers to the gift given to a priest before performing a ritual or to one's guru.
+artist: bakhat man chitrakar
+museum: museum of nepali arts
+imageID: 38
+
+title: ganga
+about: Ganga (Sanskrit: गङ्गा or गंगा) is the personification of the river Ganges who is worshipped by Hindus as the goddess of purification and forgiveness. Known by many names, Ganga is often depicted as a fair, beautiful woman, riding a divine crocodile-like creature called the Makara. Some of the earliest mentions of Ganga are found in the Rigveda, where she is mentioned as the holiest of the rivers. Her stories mainly appear in post-Vedic texts such as the Ramayana, Mahabharata, and the Puranas.
+artist: bikash kalikote
+museum: museum of nepali arts
+imageID: 39
+
+title: inclination of souls
+about: Sabita Dangol’s current series is titled “Inclination of the Soul” – these works were created over a five year period and through the pandemic and is a significant expansion of her earlier body of work.. In each of the paintings Sabita paints the comb as a metaphor to remind us that we need to be mindful of the negative energies that permeate through the hurly burly of our lives. And that it is important and possible to sift out such energies to attain a state of personal bliss or enlightenment.
+artist: sabita dangol
+museum: null
+imageID: 40
+
+title: bhairava mandala
+about: Bhairava or Bhairab is the fierce manifestation of Shiva and considered also the protector of the Himalayan Buddhist tradition. He is one of the most important deities in Nepal especially among the Newari community.
+This Thangka painting illustrates the eight main manifestations of Bhairava or “Ashta Bhairavas”. Each Bhairava has eight sub-manifestations and all of them are ruled by Maha Kala Bhairava.
+In the center of the mandala the main manifestation MahaKala Bhairava is depicted in a dancing pose and surrounded by bodhisattvas and tantric deities.
+The other manifestations of Bhairava are scattered around the main circle among other deities and Bodhisattvas.
+On top of this mandala is depicted a majestic thousand-armed Avalokistesvara.
+On the bottom part of the painting are represented two important scenes of the life of Buddha: his birth on the right and the moment he reached the enlightenment on the left side.
+artist: unknown
+museum: null
+imageID: 41
