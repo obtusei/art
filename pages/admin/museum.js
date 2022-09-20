@@ -30,7 +30,7 @@ function Museum({role}) {
   const router = useRouter();
   const addMuseum = async (e) => {
 
-    const data = { name:name,image:image, location:location,description:description,contacts:contact}
+    const data = { name:name,location:location,description:description,contacts:contact,image:image}
     try{
       const response = await fetch("/api/museum",{
         method:"POST",

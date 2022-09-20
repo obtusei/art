@@ -22,6 +22,7 @@ export default async function handler(req,res) {
             location:req.body.location,
             description:req.body.description,
             contacts:req.body.contacts,
+            image:req.body.image
           }
         });
         res.json(museum);

@@ -10,7 +10,6 @@ export default function Home() {
   const [username,setUsername] = useState('');
   const [email,setEmail] = useState('');
   const[password,setPassword]= useState('');
-  const[confirmpassword,setConfirmPassword]= useState('');
   const router  = useRouter();
   const {data:session} = useSession();
 
@@ -74,11 +73,7 @@ export default function Home() {
               </div>
               <br/>
               <div>
-                <label>Confirm password:</label> <br/>
-                <input type={'password'} placeholder={"re-enter your password"} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
-              </div> <br/>
-              <div>
-                <button onClick={ () => submitForm()} style={{width:"100%"}}>
+                <button onClick={ () => submitForm()} style={{width:"100%"}} disabled={ email === null || password === null || username === null}>
                   Sign Up 
                 </button>
               </div>
