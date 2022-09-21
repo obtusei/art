@@ -6,16 +6,24 @@ import {getSession} from "next-auth/react"
 
 export async function getServerSideProps(context) {
   const session = await getSession(context)
-  const user = await prisma.user.findUnique({
-    where:{
-      email:session.user.email
+  if (session){
+    const user = await prisma.user.findUnique({
+      where:{
+        email:session.user.email
+      }
+    })
+    const userData = JSON.parse(safeJsonStringify(user))
+    return {
+      props: {
+        role:userData.role
+      }, // will be passed to the page component as props
     }
-  })
-  const userData = JSON.parse(safeJsonStringify(user))
-  return {
-    props: {
-      role:userData.role
-    }, // will be passed to the page component as props
+  }else{
+    return{
+      props:{
+        role: "USER"
+      }
+    }
   }
 }
 
@@ -35,7 +43,6 @@ function Admin({role}) {
       <div>
         <h3><Link href={"/admin/museum"}>Add Museums</Link></h3> <br />
         <h3><Link href={"/admin/artist"}>Add Artists</Link></h3><br />
-        <h3><Link href={"/admin/art"}>Add Arts</Link></h3><br />
         <h3><Link href={"/admin/users"}>See Users</Link></h3><br />
       </div>
       

@@ -18,25 +18,30 @@ function Museum() {
       <button onClick={() => router.back()} style={{backgroundColor:"transparent",color:"red"}}>Go back</button>
       <h1>Add Art</h1>
       <hr />
-      <form>
         <div>
-          <label>Title:</label> <br/>
+          <label>title:</label> <br/>
           <input type={'text'} placeholder={"enter title"} value={name} onChange={(e) => setName(e.target.value)}/>
         </div>
         <br />
         <div>
-          <label>username:</label> <br/>
+          <label>category:</label> <br/>
           <input type={'text'} placeholder={"enter your username"} value={category} onChange={(e) => setCategory(e.target.value)}/>
         </div>
         <br />
         <div>
-          <label>username:</label> <br/>
+          <label>description:</label> <br/>
           <input type={'text'} placeholder={"enter your username"} value={description} onChange={(e) => setDescription(e.target.value)}/>
         </div>
         <br />
+        <select id="cars" name="cars">
+          <option value="volvo">Volvo XC90</option>
+          <option value="saab">Saab 95</option>
+          <option value="mercedes">Mercedes SLK</option>
+          <option value="audi">Audi TT</option>
+        </select>
         <br />
         <button onClick={addArtist}>Add</button>
-      </form>
+      
     </div>
   )
 }

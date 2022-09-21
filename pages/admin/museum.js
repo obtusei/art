@@ -44,7 +44,7 @@ function Museum({role}) {
         alert(json.error);
       }
       else{
-        alert("User created successfully");
+        alert("Museums created successfully");
         router.push("/admin");
       }
 

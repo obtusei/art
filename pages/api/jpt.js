@@ -9,7 +9,8 @@ export default async function handler(req,res) {
         if (session){
           const user = await prisma.user.findUnique({where: {email: session.user.email}})
         if (user.role == "ADMIN"){
-        res.json({admin:true});
+          const users = await prisma.user.findMany()
+        res.json(users);
         }else{
           res.status(404).json("ERROR")
         }
@@ -22,7 +23,30 @@ export default async function handler(req,res) {
       }
         
     }
-    
+    else if (req.method == "DELETE"){
+      if (session){
+        const user = await prisma.user.findUnique({where: {email: session.user.email}})
+        if (user.role == "ADMIN"){
+         try{
+          const user = await prisma.user.delete({
+            where:{
+              id:req.body.id
+            }
+          })
+          res.json(user)
+         }
+         catch{
+          res.send("ERROR")
+         }
+        }
+        else{
+          res.send("NOT ALLOWED")
+        }
+      }else{
+        res.send("NOT LOGGED IN")
+      }
+    }
+      
     else{
       res.status(405).json({ error: "Method not allowed" });
     }

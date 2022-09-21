@@ -23,13 +23,15 @@ export default async function handler(req,res) {
         if(session){
         const user = await prisma.user.findUnique({where:{email:session.user.email}})
         if (user.role == "ADMIN"){
+
           const arts = await prisma.artist.create({
-          data:{
-            name:req.body.name,
-            image:req.body.image,
-            description:req.body.description,
-          }
+            data:{
+              name:req.body.name,
+              image:Number(req.body.image),
+              description:req.body.description,
+            }
         });
+
         res.json(arts);
         }else{
           res.send("Admin only")
@@ -38,7 +40,7 @@ export default async function handler(req,res) {
         res.status(404).json("ERROR")
       }
       }catch{
-        res.status(405).json({ error: "Error creating museums" });
+        res.status(405).json({ error: `Error creating artist ${req.body.name}, ${req.body.image} and ${req.body.description}` });
       }
         
     }
