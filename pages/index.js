@@ -6,8 +6,8 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.overlay}>
         <div className={styles.main}>
-        <p className={styles.caption}>Explore Nepali Art</p>
-        <h1 className={styles.headline}>The largest collection of Nepali Art</h1>
+        <p className={styles.caption}>explore nepali art</p>
+        <h1 className={styles.headline}>the largest collection of nepali art</h1>
         <p className={styles.subheadline}>{subline}</p>
         <div>
           <Link href="/about">Read more about us</Link> <br/><br/>

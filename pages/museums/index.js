@@ -9,7 +9,7 @@ export default function Museums() {
 
   return (
     <div className={styles.mainView}>
-      <h1>Museums</h1>
+      <h1 style={{paddingLeft:"20px"}}>museums</h1>
     <div className={styles.artgrid}>
     {
       data ? data.map((museum,index) => (
