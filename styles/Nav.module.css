@@ -1,5 +1,5 @@
 .navbar{
-    padding: 10px;
+    padding: 20px 10px 10px 100px;
     z-index: 100;
     color: white;
     
@@ -16,7 +16,11 @@
     display: none;
 }
 
-
+.logoAndMenu{
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
 
 .navitem{
     display: flex;
@@ -27,7 +31,11 @@
     justify-content: center;
     
 }
-
+.dropDownButton{
+    color: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
 .linkitem{
     color: rgb(255, 0, 0) !important;
     list-style: none;
@@ -93,3 +101,4 @@
 .show {
     display: block;
 }
+

@@ -8,7 +8,11 @@ export default async function handler(req,res) {
         const museums = await prisma.museum.findUnique({
           where:{
             id:req.query.id
+          },
+          include:{
+            arts:true
           }
+          
         });
         res.json(museums);
       }catch{

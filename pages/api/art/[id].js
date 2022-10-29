@@ -6,7 +6,7 @@ export default async function handler(req,res) {
     const session = await unstable_getServerSession(req, res, authOptions)
     const user = await prisma.user.findUnique({
       where: {
-        email: session.user.email
+        email: session?.user?.email || ""
       }
     })
     if (req.method == "GET"){

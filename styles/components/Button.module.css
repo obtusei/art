@@ -2,3 +2,91 @@
           background-color: #0070f3;
           color: #fff;
 }
+
+.default{
+  background-color: transparent;
+  font-family: 'Inria Sans', sans-serif;
+  border:none;
+  padding: 5px 20px 5px 20px;
+  border-radius:0px;
+  transition:0.45s
+}
+
+.default:hover {
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  border: none;
+  transform: scale(1.1);
+}
+
+
+.defaultDark {
+  background-color: transparent;
+  color: black;
+  font-family: 'Inria Sans', sans-serif;
+  border: none;
+  padding: 5px 20px 5px 20px;
+  border-radius: 0px;
+  transition: 0.45s
+}
+.defaultDark:hover {
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  border: none;
+  
+}
+.defaultDark:focus-visible {
+  background-color: red !important;
+}
+.filled {
+  background-color: red;
+  color:white;
+  font-family: 'Inria Sans', sans-serif;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  transition: 0.45s;
+}
+.filled:hover{
+  background-color: red;
+  border:none;
+  
+
+  
+}
+.outline {
+  background-color: transparent;
+  font-family: 'Inria Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  border: 1px solid white;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  transition: 0.45s;
+  
+}
+
+.outline:hover{
+  background-color: red;
+  border: 1px solid red;
+  transform:scale(1.1)
+}
+
+.outlineDark {
+  background-color: transparent;
+  font-family: 'Inria Sans', sans-serif;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  color:black;
+  border: 1px solid black;
+  padding: 15px 20px 15px 20px;
+  border-radius: 10px;
+  transition: 0.45s;
+
+}
+
+.outlineDark:hover {
+  background-color: red;
+  border: 1px solid red;
+  transform: scale(1.1)
+}

@@ -4,6 +4,7 @@
     cursor: pointer;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: left;
 }
 
 .contents{
