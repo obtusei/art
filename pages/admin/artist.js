@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, {useState} from 'react'
@@ -11,25 +12,17 @@ function Artist() {
 
   const addArtist = async () => {
 
+    const data = {name:name,image:Number(image),description:description}
     try{
-      const response = await fetch("/api/artist",{
-        method:"POST",
-        body:JSON.stringify({name:name,image:image,description:description}),
-        headers:{
-          "Content-Type":"application/json"
-        }
-      })
-      const json = await response.json();
-      
-      if(json.error){
-        alert(json.error);
-      }
-      else{
-        alert("Artist created successfully");
-        router.push("/admin");
-      }
 
-      // router.push('/login')
+      axios.post("/api/artist",data,{withCredentials:true})
+      .then((res) => {
+        alert("Artist created successfully")
+      })
+      .catch((err) => {
+        console.log(err.response.data)
+        alert("Error creating the artist")
+      })
     }
     catch{
       console.log("error")

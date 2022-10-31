@@ -9,6 +9,14 @@
     font-family: 'Inria Sans', sans-serif;
 }
 
+.artscroll {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    overflow: scroll;
+    font-family: 'Inria Sans', sans-serif;
+}
+
 .card {
     padding: 1rem;
     height: 250px;

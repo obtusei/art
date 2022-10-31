@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import Navbar from '../components/Navbar'
 import { SessionProvider } from "next-auth/react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import OffcanvasExample from '../components/OffCanvas';

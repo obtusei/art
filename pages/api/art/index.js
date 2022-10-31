@@ -15,32 +15,59 @@ export default async function handler(req,res) {
       }catch{
         res.status(405).json({ error: "Error creating user" });
       }
-    }else if (req.method == "POST"){
+    }else if (req.method === "POST"){
       try{
         if (session){
           const user = await prisma.user.findUnique({where: {email: session.user.email}})
         if (user.role == "ADMIN"){
-          const museum = await prisma.museum.findUnique({
-          where:{
-            id:req.body.museumId
-          }
-        })
-        const artist = await prisma.artist.findUnique({
-          where:{
-            id:req.body.artistId
-          }
-        })
-        const arts = await prisma.art.create({
-          data:{
-            name:req.body.name,
-            image:req.body.image,
-            description:req.body.description,
-            category:req.body.category,
-            artist:artist,
-            museum:museum
-          }
-        });
-        res.json(arts);
+          if (req.body.artistid != "None"){
+            if (req.body.museumid != "None"){
+              const arts = await prisma.art.create({
+                data:{
+                  name:req.body.name,
+                  image:req.body.image,
+                  description:req.body.description,
+                  category:req.body.category,
+                  artist:{
+                    connect:{
+                      id:req.body.artistid
+                    }
+                  },
+                  museum:{
+                    connect:{
+                      id:req.body.museumid
+                    }
+                  }
+                }
+              });
+              res.json(arts);
+            }else{
+              const arts = await prisma.art.create({
+            data:{
+              name:req.body.name,
+              image:req.body.image,
+              description:req.body.description,
+              category:req.body.category,
+              artist:{
+                connect:{
+                  id:req.body.artistid
+                }
+              }
+            }
+          });
+          res.json(arts);
+            }
+          }else{
+            const arts = await prisma.art.create({
+            data:{
+                name:req.body.name,
+                image:req.body.image,
+                description:req.body.description,
+                category:req.body.category
+              }
+            });
+          res.json(arts);
+        }
         }else{
           res.status(404).json("ERROR")
         }
@@ -49,7 +76,7 @@ export default async function handler(req,res) {
           res.send("Admin only")
         }
       }catch{
-        res.status(405).json({ error: "Error creating user" });
+        res.status(404).json({ error: "Error creating art" });
       }
         
     }

@@ -49,6 +49,16 @@
   border-radius: 10px;
   transition: 0.45s;
 }
+
+.filled:disabled {
+  background-color: gray;
+  color: white;
+  font-family: 'Inria Sans', sans-serif;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  transition: 0.45s;
+}
 .filled:hover{
   background-color: red;
   border:none;
@@ -89,4 +99,14 @@
   background-color: red;
   border: 1px solid red;
   transform: scale(1.1)
+}
+
+.navLink{
+  font-family: 'Inria Sans', sans-serif;
+}
+
+.navLink:hover{
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
 }

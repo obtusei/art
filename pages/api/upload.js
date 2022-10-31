@@ -89,8 +89,8 @@ handler.post(async (req,res) => {
         });
       })
     }
-    if (ifExist == true){
-      fs.remove(newPath)
+    if (ifExist === true){
+      fs.remove(`./public/upload/img/${imageName}`)
       .then((res) => {
         move()
       })

@@ -72,13 +72,23 @@
 }
 .searchButton{
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
+  
+}
+.searchButtonDark{
+  background-color: transparent;
+  border: 1px solid transparent;
+  
 }
 
 .searchButton:hover{
   background-color: transparent;
   border: 1px solid white;
-  border-radius: 0px;
+}
+
+.searchButtonDark:hover{
+  background-color: transparent;
+  border: 1px solid black;
 }
 @media (max-width: 700px) {
   .grid {

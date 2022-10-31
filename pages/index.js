@@ -1,14 +1,13 @@
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import bstyles from '../styles/components/Button.module.css'
 import { Container,Row,Col,Form,Button } from 'react-bootstrap'
 import Image from 'next/image'
 import { useState } from 'react';
-export default function Home() {
+import { useRouter } from 'next/router'
 
-  const subline = "nepali art is a reflection of the country’s culture and soul, with an artistic history spanning over two millennia. " 
-  const subline2 = " occupies a unique position in a web-based platform because of its focus on nepali artistic practices and traditions.  here we house a collection of nepali art that covers both its religious traditions and more recent secular manifestations. "
+export default function Home() {
   const [searchTerm,setSearchTerm] = useState("")
+  const router = useRouter()
   return (
     <div className={styles.container}>
       <div className={styles.overlay}>
@@ -40,26 +39,18 @@ export default function Home() {
 
                     }}
                   />
-                  <Button className={styles.searchButton}>
+                  <Button className={styles.searchButton} onClick={
+                    () => router.push(`/search?q=${searchTerm}`)
+                  }>
                     <Image src={"/search.svg"} width={"24px"} height={"24px"} alt={"search"}/>
                   </Button>
                 </Form>
                 <br />
-                {/* <h5 className={styles.subheadline}>{subline}<b>art history tracker</b>{subline2}</h5> */}
                 <br />
-                <Button className={bstyles.outline}>about us <ArrowIcon/></Button>
+                <Button className={bstyles.outline} onClick={() => router.push("/about")}>about us <ArrowIcon/></Button>
             </Col>
           </Row>
         </Container>
-        {/* <div className={styles.main}>
-        <p className={styles.caption}>explore nepali art</p>
-        <h1 className={styles.headline}>the largest collection of nepali art</h1>
-        <p className={styles.subheadline}>{subline}</p>
-        <div>
-          <Link href="/about">Read more about us</Link> <br/><br/>
-          <Link href="/arts" className={styles.mainButton}>Discover Arts</Link>
-        </div>
-      </div> */}
       </div>
     </div>
   )

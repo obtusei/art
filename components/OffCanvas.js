@@ -10,9 +10,13 @@ import Link from 'next/link';
 import bstyles from "../styles/components/Button.module.css"
 import { MenuIcon } from './Icons';
 import { useSession, signOut } from "next-auth/react"
+import useSWR from 'swr';
+import { useEffect } from 'react';
+const fetcher = url => fetch(url).then(r => r.json())
 function OffcanvasExample() {
   const router = useRouter()
   const { data: session } = useSession()
+  const {data:userData} = useSWR("/api/users/session",fetcher)
   const mainColor = router.pathname == "/" ? "white":"black"
   const navItems = [
     {
@@ -26,7 +30,19 @@ function OffcanvasExample() {
     {
       name:"museums",
       href:"/museums"
-    }
+    },
+    {
+      name:"search",
+      href:"/search"
+    },
+    {
+      name:"about",
+      href:"/about"
+    },
+    {
+      name:userData && userData.role == "ADMIN" ? "admin":"",
+      href:userData && userData.role == "ADMIN" ? "/admin":"/"
+    },
   ]
   
   return (
@@ -38,7 +54,7 @@ function OffcanvasExample() {
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} size="sm" style={{border:"none", color:router.pathname == "/" ? "white":"black",fontSize:"24px"}}>
               <MenuIcon isDark={router.pathname != "/"}/>
             </Navbar.Toggle>
-              <Navbar.Brand href="/" style={{color:router.pathname == "/" ? "white":"black",fontFamily:"Bodoni Moda"}}>aht</Navbar.Brand>
+              <Navbar.Brand href="/" style={{color:router.pathname == "/" ? "white":"black",fontFamily:"Bodoni Moda"}}>art history tracker</Navbar.Brand>
             </div>
             <div>
               {
@@ -47,7 +63,10 @@ function OffcanvasExample() {
               <Button className={bstyles.filled} onClick={() => router.push("/signup")}>sign up</Button>
               </>:
               <div>
-              <Button disabled style={{backgroundColor:"transparent",fontFamily: 'Inria Sans, sans-serif',border:"none",opacity:"1",color:mainColor}}>{session?.user?.name}</Button>
+                
+              <Button onClick={() => {
+                router.push(userData ? `/${userData.username}`:"/")
+                }} style={{backgroundColor:"transparent",fontFamily: 'Inria Sans, sans-serif',border:"none",opacity:"1",color:mainColor}}>{session?.user?.name}</Button>
               <Button className={bstyles.filled} onClick={() => signOut()}>sign out</Button>
               </div>
               }
@@ -72,7 +91,7 @@ function OffcanvasExample() {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   {
                     navItems.map((navItem,index) => (
-                      <Nav.Link href={navItem.href} as={Link} key={index}><p>{navItem.name}</p></Nav.Link>
+                      <Nav.Link href={navItem.href} as={Link} key={index}><p className={bstyles.navLink}>{navItem.name}</p></Nav.Link>
                     ))
                   }
                 </Nav>

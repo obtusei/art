@@ -24,7 +24,7 @@ export default function Home() {
     {
       data ? data.map((artist,index) => (
         <div key={index} className={styles.griditem}>
-          <ArtCard p={artist.name} topHidden href={`/artists/${artist.id}`} image={`/artist/${artist.image}.jpg`}/>
+          <ArtCard name={artist.name} id={artist.id} image={`/artist/${artist.image}.jpg`} pathname="artist"/>
         </div>
       )): error ? <>Error</>:<></>
     }

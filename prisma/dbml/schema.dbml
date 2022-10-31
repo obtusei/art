@@ -1,0 +1,104 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table user {
+  id String [pk]
+  name String [not null]
+  username String [unique, not null]
+  email String [unique, not null]
+  image String
+  password String [not null]
+  bio String
+  createdAt DateTime [default: `now()`, not null]
+  role Role [not null, default: 'USER']
+  art savedart [not null]
+  museum savedmuseum [not null]
+  artist savedartist [not null]
+}
+
+Table savedart {
+  id String [pk]
+  type SavedType [not null]
+  user user
+  userId String
+  art art
+  artId String
+}
+
+Table savedmuseum {
+  id String [pk]
+  type SavedType [not null]
+  user user
+  userId String
+  museum museum
+  museumId String
+}
+
+Table savedartist {
+  id String [pk]
+  type SavedType [not null]
+  user user
+  userId String
+  artist artist
+  artistId String
+}
+
+Table museum {
+  id String [pk]
+  name String [not null]
+  location String [not null]
+  description String [not null]
+  contacts String [not null]
+  image Int [not null]
+  arts art [not null]
+  savedby savedmuseum [not null]
+}
+
+Table art {
+  id String [pk]
+  name String [not null]
+  image String [not null]
+  category String [not null]
+  artist artist
+  artistid String
+  description String [not null]
+  museum museum
+  museumid String
+  savedby savedart [not null]
+}
+
+Table artist {
+  id String [pk]
+  name String [not null]
+  image Int
+  description String [not null]
+  arts art [not null]
+  savedby savedartist [not null]
+}
+
+Enum Role {
+  ADMIN
+  USER
+}
+
+Enum SavedType {
+  FAV
+  SAVE
+}
+
+Ref: savedart.userId > user.id
+
+Ref: savedart.artId > art.id
+
+Ref: savedmuseum.userId > user.id
+
+Ref: savedmuseum.museumId > museum.id
+
+Ref: savedartist.userId > user.id
+
+Ref: savedartist.artistId > artist.id
+
+Ref: art.artistid > artist.id
+
+Ref: art.museumid > museum.id

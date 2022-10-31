@@ -1,11 +1,14 @@
 import { useRouter } from 'next/router'
 import React from 'react'
+import { Button, Table } from 'react-bootstrap'
 import useSWR from 'swr'
+import bstyles from "../../styles/components/Button.module.css"
+import { useSession } from 'next-auth/react'
 const fetcher = url => fetch(url).then(r => r.json())
 function Users() {
   const router = useRouter()
   const { data, error } = useSWR('/api/jpt', fetcher)
-
+  const {data:session} = useSession()
   const deleteUser = async (e) =>{
     
   }
@@ -17,13 +20,13 @@ function Users() {
       <button onClick={() => router.back()} style={{backgroundColor:"transparent",color:"red"}}>Go back</button>
       <h1>Users</h1>
       <hr />
-      <table>
+      <Table striped bordered hover>
         <thead>
-          <th>SN</th>
+          <tr><th>SN</th>
           <th>Username</th>
           <th>Name</th>
           <th>Email</th>
-          <th>Actions</th>
+          <th>Actions</th></tr>
         </thead>
         <tbody>
           {
@@ -33,7 +36,7 @@ function Users() {
                 <td>{user.username}</td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td><button onClick={
+                <td><Button className={bstyles.filled} onClick={
                   async () => {
                     const data = {id:user.id}
                     try{
@@ -57,12 +60,12 @@ function Users() {
                       alert("ERROR aayo")
                     }
                   }
-                }>delete</button></td>
+                } hidden={session && session.user.email === user.email}>delete</Button></td>
             </tr>
             ))
           }
         </tbody>
-      </table>
+      </Table>
     </div>
   )
     }

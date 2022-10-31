@@ -17,13 +17,13 @@ export default async function handler(req,res) {
         const user = await prisma.user.findUnique({where:{email:session.user.email}})
         if (user.role == "ADMIN"){
           const museum = await prisma.museum.create({
-          data:{
-            name:req.body.name,
-            location:req.body.location,
-            description:req.body.description,
-            contacts:req.body.contacts,
-            image:req.body.image
-          }
+            data:{
+              name:req.body.name,
+              location:req.body.location,
+              description:req.body.description,
+              contacts:req.body.contacts,
+              image:req.body.image
+            }
         });
         res.json(museum);
         }
@@ -34,15 +34,15 @@ export default async function handler(req,res) {
         res.status(404).json("ERROR")
       }
       }catch{
-        res.status(405).json({ error: "Error creating museum" });
+        res.status(404).json({ error: "Error creating museum" });
       }
         
     }
     else if (req.method == "DELETE"){
       try{
-        if(session){
-        const user = await prisma.user.findUnique({where:{email:session.user.email}})
-        if (user.role == "ADMIN"){
+        // if(session){
+        // const user = await prisma.user.findUnique({where:{email:session.user.email}})
+        // if (user.role == "ADMIN"){
           const arts = await prisma.museum.delete({
           where:{
             id:req.body.id
@@ -50,14 +50,14 @@ export default async function handler(req,res) {
         });
         res.json(arts);
 
-        }
-        else{
-          res.send("Admin only")
-        }
-      }
-      else{
-        res.status(404).json("ERROR")
-      }
+      //   }
+      //   else{
+      //     res.send("Admin only")
+      //   }
+      // }
+      // else{
+      //   res.status(404).json("ERROR")
+      // }
       }catch{
         res.status(405).json({ error: "Error deleting museums" });
       }

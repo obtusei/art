@@ -1,8 +1,12 @@
 import styles from '../styles/signup.module.css'
+import bstyles from '../styles/components/Button.module.css'
 import Link from 'next/link'
 import { useSession,signIn } from 'next-auth/react'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
+import Lottie from "lottie-react"
+import loginAnimation from "../public/loginTwo.json"
 export default function Home() {
 
   const [username,setUsername] = useState('')
@@ -13,26 +17,24 @@ export default function Home() {
     router.push('/');
   }
   return (
-    <div className={styles.container}>
-
-        <div className={styles.column2}>
-          <div className={styles.signup}>
+    <Container className={styles.container}>
+      <Row>
+        <Col style={{display:"flex",justifyContent:"center"}}>
+            <Lottie animationData={loginAnimation} style={{height:500}}/>;
+        </Col>
+        <Col style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
             <h1>login</h1>
-            
-
-              <div>
-                <label>username:</label> <br/>
-                <input type={'text'} placeholder={"enter your username"} value={username} onChange={(e) => setUsername(e.target.value)}/>
-              </div>
-
-              <br/>
-              <div>
-                <label>password:</label> <br/>
-                <input type={'password'} placeholder={"create a password"} value={password} onChange={(e) => setPassword(e.target.value)}/>
-              </div>
-              <br/>
-              <div>
-                <button style={{width:"100%"}} onClick={
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Username</Form.Label>
+              <Form.Control type={'text'} placeholder={"enter your username"} value={username} onChange={(e) => setUsername(e.target.value)}/>
+              <Form.Text style={{color:"red"}}></Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type={'password'} placeholder={"enter a password"} value={password} onChange={(e) => setPassword(e.target.value)}/>
+            </Form.Group>
+            <Button className={bstyles.filled} style={{width:"100%",backgroundColor:"red"}} onClick={
                   ()  => {
                     let data={
                     username:username,
@@ -41,17 +43,16 @@ export default function Home() {
                     signIn("credentials", data)
                     
                   }
-                }>
+                } disabled={username === "" || password === ""}>
                   login
-                </button>
-              </div>
-
+                </Button>
+            </Form>
+            <br />           
               <div>
-                <p>not a user yet? <Link href="/signup">signup</Link></p>
+                <p>not a user yet? <Link href="/signup"><a style={{color:"red"}}>signup</a></Link></p>
               </div>
-          </div>
-        </div>
-      
-    </div>
+        </Col>
+      </Row>
+    </Container>
   )
 }

@@ -30,25 +30,16 @@ function Museum({role}) {
   const router = useRouter();
   const addMuseum = async (e) => {
 
-    const data = { name:name,location:location,description:description,contacts:contact,image:image}
+    const data = { name:name,location:location,description:description,contacts:contact,image:Number(image)}
     try{
-      const response = await fetch("/api/museum",{
-        method:"POST",
-        body:JSON.stringify(data),
-        headers:{
-          "Content-Type":"application/json"
-        }
-      })
-      const json = await response.json();
-      if(json.error){
-        alert(json.error);
-      }
-      else{
-        alert("Museums created successfully");
-        router.push("/admin");
-      }
 
-      // router.push('/login')
+      axios.post("/api/museum",data,{withCredentials:true})
+      .then((res) => {
+        alert("Museums created successfully");
+      })
+      .then((err) => {
+          console.log(err)
+      })
     }
     catch{
       console.log("error")

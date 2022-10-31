@@ -15,8 +15,8 @@ export default function Museums() {
       <div className={styles.artgrid}>
     {
       data ? data.map((museum,index) => (
-        <div key={index} className={styles.card}>
-          <ArtCard topHidden p={museum.name} href={`/museums/${museum.id}`} image={`/museums/${museum.image}.jpg`}/>
+        <div key={index} className={styles.griditem}>
+          <ArtCard name={museum.name} id={museum.id} image={`/museums/${museum.image}.jpg`} pathname="museum"/>
         </div>
       )): error ? <>Error</>:<></>
     }

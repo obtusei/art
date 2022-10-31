@@ -16,10 +16,14 @@ function Artist() {
   const { data, error } = useSWR(`/api/museum/${router.query.id}`, fetcher)
   
   const getSperated = () => {
-    const text = "Email- info@mona.com.np, Phone- 01-4700800"
-    const splited = text.split("- ")
-    
-    return {email:splited[1].split(",")[0],phone:splited[2]}
+    if (data){
+      const splited = data.contacts.split("- ")
+      return {email:splited[1].split(",")[0],phone:splited[2]}
+    }
+    return {
+      email:"",
+      phone:""
+    }
   }
   if (!data) return <></>
   else if (error) return <p>Error</p>
@@ -36,9 +40,12 @@ function Artist() {
           <h1>{data.name}</h1>
           <h5>About:</h5>
           <p>{data.description}</p>
+          <h5>Locations:</h5>
+          <p>{data.location}</p>
           <h5>Contacts:</h5>
           <p><b>Email: </b><br /><a href={`mailto:${getSperated().email}`} style={{color:"red"}}>{getSperated().email}</a><br/>
-          <b>Phone: </b><br />{getSperated().phone}</p>
+          <b>Phone: </b><br />{getSperated(data.contacts).phone}
+          </p>
           
         </div>
           </Col>
